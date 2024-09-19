@@ -1,6 +1,9 @@
 // Replace with your YouTube Data API key
 const API_KEY = 'AIzaSyCIxUU90zQnP9YBUWc77oARXUD9qZsx0vo';
 
+const corsProxy = "https://cors-anywhere.herokuapp.com/";
+const apiUrl = `${corsProxy}https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&type=video&order=viewCount&publishedAfter=2023-09-12T00:00:00Z&key=${API_KEY}`;
+
 // Function to fetch top channels
 // Fetch popular videos uploaded in the last 7 days
 async function fetchPopularVideos() {
